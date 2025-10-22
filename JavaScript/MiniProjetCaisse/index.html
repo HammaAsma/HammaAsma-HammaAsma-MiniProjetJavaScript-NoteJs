@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Mini Caissier</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">   
+    
+</head>
+<body>
+    <h1>Les Articles</h1>
+    <div class="flex-container">
+        <div >
+            <h2>SmartPhone</h2>
+            <img src="image/imageIphone.png" alt="SmartPhone Image">
+            <p>Prix: $300</p>
+            <span id="stock_Phone">Quantité En stock:  </span>
+            <button onclick="addItem('Phone')">Ajouter au panier</button>
+        </div>
+        <div >
+            <h2>Smart TV</h2>
+            <img src="image/imageTv.png" alt="Smart TV Image">
+            <p>Prix: $220</p>
+            <span id="stock_SmartTV">Quantité En stock:  </span>
+            <button onclick="addItem('SmartTV')">Ajouter au panier</button>
+        </div>
+        <div >
+            <h2>Console de Jeu</h2>
+            <img src="image/image.png" alt="Console de Jeu Image">
+            <p>Prix: $150</p>
+            <span id="stock_GamingConsole">Quantité En stock:  </span>
+            <button onclick="addItem('GamingConsole')">Ajouter au panier</button>
+        </div>
+    </div>
+    <footer>
+        <ul id="listpanier"></ul>
+        <h2 id="totalPrice">Le prix total est: 0$</h2>
+        <button  id="btn">Payer</button>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
