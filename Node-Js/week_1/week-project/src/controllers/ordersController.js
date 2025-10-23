@@ -42,6 +42,6 @@ export function getOrderById(key){
 }
 export function getOrderByNumber(key){
     //on va rehcerche ds orders  la commande qui à le mm orderNumber 
-  const product = products.data.find(p => p.orderNumber === key.orderNumber);
-  return product || { error: "Ce Produit n'existe pas" };
+  const product = orders.data.find(p => p.orderNumber === key.orderNumber);
+  return product || { error: "Cette commande n'existe pas" };
 }
