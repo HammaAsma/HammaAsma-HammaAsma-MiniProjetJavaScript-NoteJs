@@ -20,10 +20,27 @@ export function getProducts(query){
     //si on va recupere depuis plusieurs pages
     const start = (page - 1) * limit;//==>le début le récuperation
     const end = start + limit;//==>la fin
+
+      // Filtrage
+    let filtered= products.data;
+    //catégory
+    if (query.category) {
+      filtered = filtered.filter(p => p.category.toLowerCase() === query.category.toLowerCase());
+    }
+    //prix min
+    if (query.minPrice) {
+      filtered = filtered.filter(p => p.minPrice >= Number(query.minPrice));
+    }
+    //prix max
+    if (query.maxPrice) {
+      filtered = filtered.filter(p => p.maxPrice <= Number(query.maxPrice));
+    }
+
     //un Nouveau tableau qui va contenant que les éléments de la page demande ainsi le Nb
-    const tableProducts = products.data.slice(start, end);
+    const tableProducts = filtered.slice(start, end);
     return  tableProducts;
 }
+
 //cette fct renoyer les infos d'un produit a partir de sont id
 export function getProductById(key) {
     //on va rehcerche ds products le produit qui à le mm id 
