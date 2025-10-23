@@ -1,0 +1,12 @@
+{
+  "name": "node-system-logger",
+  "version": "1.0.0",
+  "type": "module",
+  "bin": {
+    "node-monitor": "./monitor.js"
+  },
+  "scripts": {
+    "start-server": "node server.js",
+    "start-monitor": "node monitor.js"
+  }
+}
