@@ -1,7 +1,5 @@
 Activité 1 — “Diagnostic Machine”
-
-Code: 
-
+Code:
     const os =require("os");//accéder au module os
     console.log("Plateforme :",os.platform());//return la plateform de système dEX
     console.log("architecture :",os.arch());//return l'architecteur de CPU
@@ -25,9 +23,7 @@ système) ?
 
 
 Activité 2 — “Explorateur de fichiers”: 
-
 code:
-
     const fs=require("fs");//importation de fs
     const path=require("path");//importation de path ==>pour construire ou analyser des chemins de fichiers
 
@@ -49,7 +45,6 @@ code:
 
 Activité 3 —“Moniteur d’événements” 
 Code:
-
     const EventEmitter=require("events");
     const emitter=new EventEmitter();
 
@@ -70,7 +65,6 @@ Discussion :
 
 Activité 4 — “Classe de Journalisation (Logger)” : 
 Code
-
     //logger
     const EventEmitter=require("events");// n importiw module "events" bach nkhdmo b l'événements
     class Logger extends EventEmitter{// nkhlqo wahd class Logger li kat Eyrita  men EventEmitter
@@ -102,7 +96,6 @@ Discussion :
 
 Activité 5 — “Serveur Node minimaliste” : 
 Code:
-
     const http=require("http");// nimportiw module http bach ndir serveur
     const server=http.createServer((req,res)=>{// nkhlqo wahd serveur
         if(req.url==="/"){ // ila l'utilisateur mcha l'home page   "/"
@@ -125,7 +118,6 @@ Code:
 
 Activité 6 — “Combinaison finale” : 
 Code:
-
     //logger
     const fs=require("fs");// n importiw module fs bach nkhdmo 3la les fichiers
     const EventEmitter=require("events");// n importiw module events bach nkhdmo b l'événements
