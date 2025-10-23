@@ -33,7 +33,7 @@ export function getProductById(key) {
 }
 //infos de produit par sku
 export function getProductBySku(value) {
-//on va rehcerche ds products le produit qui à le mm id 
+//on va rehcerche ds products le produit qui à le mm sku 
   const product = products.data.find(p => p.sku === value.sku);
   return product || { error: "Ce Produit n'existe pas" };
 }
