@@ -1,13 +1,47 @@
-import orders from "../../data/orders.json" assert { type: "json" };
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
-function getOrders(){
+// --- Récupérer __dirname en ES Modules ---
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// --- Charger JSON des produits ---
+const orders = JSON.parse(
+  fs.readFileSync(path.join(__dirname, "../../data/orders.json"), "utf-8")
+);
+//list des commandes
+export function getOrders(query) {
+
+  const { from, to, status, page = 1, limit = 10 } = query;
+
+  // on va filtre selon les paramettre passe dans la requete Get
+  const filtered = orders.data.filter(o => {
+    //on prend les commandes à partir de date debut qui est passe par la requete
+    const fromOk = from ? new Date(o.from) >= new Date(from) : true;
+    //on prend les commandes avant ou egal au date passe par la requete
+    const toOk = to ? new Date(o.to) <= new Date(to) : true;
+    //on filtre avec status passe par la requete 
+    const statusOk = status ? o.status === status : true;
+
+    return fromOk && toOk && statusOk;
+  });
+
+ //un tableau qui contient les commandes selon le filtres
+  const tableOrders = filtered.slice(0, Number(limit));
+
+  return tableOrders;
+}
+
+export function getOrderById(key){
+    //on va rehcerche ds orders la commande qui à le mm id 
+  const order = orders.data.find(p => p.id === Number(key.id));
+  //si trouve on le retourne 
+  return order || { error: "Cette commande n'existe pas" };
 
 }
-function getOrderById(id){
-
+export function getOrderByNumber(key){
+    //on va rehcerche ds orders  la commande qui à le mm orderNumber 
+  const product = products.data.find(p => p.orderNumber === key.orderNumber);
+  return product || { error: "Ce Produit n'existe pas" };
 }
-function getOrderByNumber(){
-
-}
-
-export default {getOrders, getOrderById, getOrderByNumber};
