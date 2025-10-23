@@ -34,4 +34,4 @@ const server = http.createServer((req, res) => {
   }
 });
 // serveur kay sma3 f port 3000 ay drna wahd event listen 3la had port
-server.listen(3000, () => console.log("Serveur en écoute sur le port 3000...")); // server.js → serveur HTTP pour afficher les logs.
+server.listen(3000, () => console.log("Serveur en écoute sur le port 3000...")); 
