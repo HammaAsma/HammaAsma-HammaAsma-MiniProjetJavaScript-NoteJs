@@ -1,13 +1,9 @@
-import orders from "../../data/orders.json" assert { type: "json" };
+import { getOrders } from "../services/ordersService";
 
-function getOrders(){
 
+export function listOrders(query) {
+
+  const { from, to, status, page, limit  } = query;
+
+  
 }
-function getOrderById(id){
-
-}
-function getOrderByNumber(){
-
-}
-
-export default {getOrders, getOrderById, getOrderByNumber};

@@ -1,13 +1,10 @@
-import products from "../../data/products.json" assert { type: "json" };
+import routes from "../router";
+import { getProducts } from "../services/productsService";
 
-function getProducts(){
-
-}
-function getProductById(id){
-
-}
-function getProductBySku(){
+//List des Produits  
+export function listProducts(query){
+  const { q, category, minPrice, maxPrice,inStock, oage, limit  } = query;
 
 }
 
-export default {getProducts, getProductById, getProductBySku};
+
