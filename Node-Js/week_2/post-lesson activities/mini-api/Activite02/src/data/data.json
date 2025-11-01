@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "Node.js",
+    "type": "runtime"
+  },
+  {
+    "id": 2,
+    "name": "Express",
+    "type": "framework"
+  },
+  {
+    "id": 3,
+    "name": "MongoDB",
+    "type": "database"
+  },
+  {
+    "id": 4,
+    "name": "React",
+    "type": "library"
+  },
+  {
+    "id": 5,
+    "name": "Angular",
+    "type": "framework"
+  },
+  {
+    "id": 6,
+    "name": "Vue.js",
+    "type": "framework"
+  },
+  {
+    "id": 7,
+    "name": "TypeScript",
+    "type": "language"
+  },
+  {
+    "id": 8,
+    "name": "JavaScript",
+    "type": "language"
+  },
+  {
+    "id": 9,
+    "name": "PostgreSQL",
+    "type": "database"
+  },
+  {
+    "id": 10,
+    "name": "MySQL",
+    "type": "database"
+  },
+  {
+    "id": 11,
+    "name": "Redis",
+    "type": "cache"
+  },
+  {
+    "id": 12,
+    "name": "Docker",
+    "type": "tool"
+  },
+  {
+    "id": 13,
+    "name": "Kubernetes",
+    "type": "tool"
+  },
+  {
+    "id": 14,
+    "name": "Nginx",
+    "type": "server"
+  },
+  {
+    "id": 15,
+    "name": "Apache",
+    "type": "server"
+  },
+  {
+    "id": 16,
+    "name": "GraphQL",
+    "type": "api"
+  },
+  {
+    "id": 17,
+    "name": "REST",
+    "type": "api"
+  },
+  {
+    "id": 18,
+    "name": "Jest",
+    "type": "testing"
+  },
+  {
+    "id": 19,
+    "name": "Mocha",
+    "type": "testing"
+  },
+  {
+    "id": 20,
+    "name": "Chai",
+    "type": "testing"
+  }
+]
